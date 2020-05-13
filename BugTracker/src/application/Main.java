@@ -15,6 +15,8 @@ public class Main extends Application {
 	public void start(Stage stage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("/Layouts/Login.fxml"));
+			LoginController controller = new LoginController();
+			controller.setStage(stage);
 			Scene scene = new Scene(root);
 			stage.initStyle(StageStyle.UNDECORATED);
 			stage.setScene(scene);
